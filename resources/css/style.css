@@ -1,8 +1,3 @@
-/*
-color: #
-
-*/
-
 
 /* ----------------------------------------------- */
 /* BASIC SETUP */
@@ -51,18 +46,18 @@ section {
     
 }
 .box h3{
-    text-align: center;
+    text-align: justify;
 }
 
 /* ----- LINKS ----- */
 
 a:link,
 a:visited {
-    color: #3f17cf;
+    color: #e67e22;
     text-decoration: none;
     font-size: 80%;
     padding-bottom: 1px;
-    border-bottom: 1px solid #3f17cf;
+    border-bottom: 1px solid #e67e22;
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
@@ -88,13 +83,14 @@ input[type=submit] {
 .btn:hover,
 .btn:active
  {
-background-color: #3f17cf;
+background-color: #011f4b;
 }
 .btn-full:link,
 .btn-full:visited
 {
-    background-color: #3f17cf73;
-    border: 1px solid #3f17cf73;
+    
+    border: 2px solid #03396c;
+    background-color: #03396c;
     color: #fff;
     margin-right: 15px;
 }
@@ -103,17 +99,18 @@ background-color: #3f17cf;
 .btn-ghost:visited {
     border: 1px solid #fff;
     color: #fff;
+   
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #3f17cf;
-    background-color: #3f17cf;
+    border: 2px solid #011f4b;
+    background-color: #011f4b;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #3f17cf;
+    border: 1px solid #011f4b;
     color: #fff;
 }
 /* ----- PARAGRAPHS ----- */
@@ -126,11 +123,11 @@ background-color: #3f17cf;
 }
 /* ----- ICONS ----- */
 .icon-big {
-    font-size: 200%;
+    font-size: 250%;
     display: block;
-    color: #3f17cf;
+    color: #e67e22;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: justify;
 }
 
 .icon-small {
@@ -141,7 +138,7 @@ background-color: #3f17cf;
     font-size: 120%;
     margin-right: 10px;
     
-    /*secrets to align text and icons*/
+   
     line-height: 120%;
     vertical-align: middle;
     margin-top: -5px;
@@ -150,8 +147,10 @@ background-color: #3f17cf;
 /* HEADER */
 /* ----------------------------------------------- */
 
+
 .bk-video{
     position: relative;
+
     width: 100%;
     height: 100vh;
     display: flex;
@@ -159,15 +158,18 @@ background-color: #3f17cf;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    
+    
 }
 .bk-video video{ 
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 75%;
     object-fit: cover;
     background-attachment: fixed;
+    
 
 }
 
@@ -186,7 +188,7 @@ background-color: #3f17cf;
     position: absolute;
     margin-top: 1px;
     top: 5%;
-    right: 10%;
+    right: 5%;
     transform: translate(60%, 0%);
     list-style: none;
     margin-top: 1px;
@@ -195,12 +197,10 @@ background-color: #3f17cf;
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 30px;
 }
-.main-nav li {
-    display: inline-block;
-    margin-left: 40px;
-}
+
+
 
 .main-nav li a:link,
 .main-nav li a:visited {
@@ -223,10 +223,10 @@ background-color: #3f17cf;
 
 /*--------------- logo-----------------*/
 .logo {
-    height: 120px;
+    height: 130px;
     width: auto;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 10px;
     top: 10%;
     left: 10%;
     transform: translate(-50%, -50%);
@@ -322,7 +322,7 @@ h3 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #3f17cf;
+    background-color: #e67e22;
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -332,13 +332,15 @@ h2:after {
 /* ----------------------------------------------- */
 /* CAROUSEL*/
 /* ----------------------------------------------- */
-.carousel-item{
+/* .carousel-item{
     height:100vh;
     width: 100%;
     background: scroll center scroll;
     background-size: cover;
     background-position: center;
-}
+} */
+
+
 
 /* ----------------------------------------------- */
 /* FOOTER */
