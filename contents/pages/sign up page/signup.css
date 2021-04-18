@@ -1,65 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
 
-
-.bk-image{
-	
-	
-	height: 100vh;
-	width: auto;
-	display: flex;
-	background-attachment:fixed;
-	align-items: center;
-	overflow: hidden;
-}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
 
 body {
 	
 	font-family: 'Open Sans', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
+    height: 100%;
+	background: url("bk\ image.jpg") no-repeat center;
+	background-size: cover;
+   
+   
 }
 
-.container {
+/* ################################## Form Body Design ################################################ */
+.form-container {
 	
-	/* border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.719);
+    box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
+    -webkit-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
+    -moz-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
+    padding: 30px;
+	padding-left: 40px;
+    color: white;
 	
-	box-shadow: 0px 0px 28px 13px rgba(0,0,0,0.78);
-	overflow: hidden;
-	width: 400px;
-	max-width: 100%; */
-	background-color: rgba(73, 64, 64, 0.61);
-
-	position: absolute;
-    width: 500px;
-    top: 10%;
-    left: 50%;
-	box-shadow: 0px 0px 28px 13px rgba(0,0,0,0.78);
-    /* -webkit-transform: translate(-50%, -50%); */
-    transform: translate(-50%, -100%);
-	margin-top: 40%;
-    color: rgb(255, 255, 255);
-	 border-radius: 20px;
 }
-
-
-
- h2 {
-	margin-top: 10px;
+h2 {
+	margin-top: 15px;
     text-align: center;
 }
-
-.form {
-	padding: 10px 40px;	
-}
-
+/* ################################## Form Field Design ################################################ */
 .form-check {
 	margin-bottom: 5px;
 	padding-bottom: 15px;
 	position: relative;
+	width: 90%;
 }
 
 .form-check label {
@@ -68,18 +50,32 @@ body {
 }
 
 .form-check input {
-	border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
+    margin-top: 30px;
+	margin-left: 30px;
+    color:white;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #f0f0f0;
+     
+	/* border-radius: 4px; */
+	/* display: block; */
 	font-family: inherit;
-	font-size: 14px;
+    
+	font-size: 15px;
 	padding: 1px;
 	width: 100%;
+    transition: all 0.3s;
+}
+.form-check ::-webkit-input-placeholder{
+    color: white;
+    opacity: 0.7;
 }
 
 .form-check input:focus {
 	outline: 0;
-	border-color: #777;
+	border-color: rgba(0, 81, 255, 0.534);
 }
 
 .form-check.success input {
@@ -89,39 +85,26 @@ body {
 .form-check.error input {
 	border-color: #e74c3c;
 }
-
-.form-check i {
-	visibility: hidden;
-	position: absolute;
-	top: 40px;
-	right: 10px;
-}
-
-.form-check.success i.ion-ios-checkbox{
-	color: #2ecc71;
-	visibility: visible;
-}
-
-.form-check.error i.ion-md-information {
-	color: #e74c3c;
-	visibility: visible;
-}
-
+/* ################################## Form Error mssg Design ################################################ */
 .form-check small {
 	color: #e74c3c;
 	position: absolute;
+	margin-left: 30px;
 	bottom: 0;
 	left: 0;
 	visibility: hidden;
+	transition: all 0.3s;
 }
 
 .form-check.error small {
 	visibility: visible;
 }
-
-.form button {
-	background-color: #5444ad;
-	border: 2px solid #2c1e7c;
+/* ################################## Form Button Design ################################################ */
+.form-container button {
+	/* background-color: #5444ad;
+	border: 2px solid #2c1e7c; */
+	background: transparent;
+	cursor: pointer;
 	border-radius: 4px;
 	color: #fff;
 	display: block;
@@ -131,52 +114,94 @@ body {
 	margin-top: 10px;
 	width: 100%;
 }
-
-/* #########################pass strength############################## */
-
-
-
-.wallet .field{
-	padding-bottom: 20px;
-  }
-  .field input{
+.form-container .bttn{
+	border-color: transparent;
+	border-bottom: 10px solid #f0f0f03a;
+	border-top: 10px solid #f0f0f03a;
+}
+.form-container .bttn:focus {
+	outline: 0;
 	
+	border-bottom: 10px solid #330ddb83;
+	border-top: 10px solid #330ddb83;
 	transition: all 0.3s;
-  }
-  .field input:focus{
-	border-color: #27ae60;
-	box-shadow: inset 0 0 3px #2fd072;
-  }
-  .wallet .field .showBtn{
+	
+}
+.form-container .bttn:focus .sub{
+	color: white;
+	opacity: .1;
+	transition: all 0.3s;
+	
+} 
+/* ################################## Form Icon Design ################################################ */
+.form-check i{
 	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-650%);
-	font-size: 10px;
-	font-weight: 600;
+	transform: translateY(105%);
+	font-size: 25px;
+	color: #ffffff;
+	transition: all 0.3s;
+}
+
+.form-check.success i{
+  color: #2ecc71;
+  position: absolute;
+  transform: translateY(105%);
+  font-size: 25px;
+  
+}
+.form-check.error i{
+  color: #e74c3c;
+  position: absolute;
+	transform: translateY(105%);
+	font-size: 25px;
+}
+/* ################################## Form Password show icon Design ################################################ */
+.eye {
+	float: right;
 	cursor: pointer;
+	transform: translateY(00%);
+	font-size: 20px;
+}
+.eye i{
+
+	transform: translateY(-100%);
+	
+}
+.form-check.success .eye i{
+	transform: translateY(-100%);
+	
+}
+.form-check.error .eye i{
+	transform: translateY(-100%);
+}
+
+#hide1{
 	display: none;
-	user-select: none;
-  }
-  .indicator{
-	height: 2px;
-	margin: 2px 10px;
+}
+/* ################################## Password strength indicator Design ################################################ */
+.indicator{
+	height: 5px;
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	display: none;
+	transition: all 1s;
   }
-  .indicator span{
+
+.indicator span{
 	position: relative;
 	height: 100%;
 	width: 100%;
 	background: lightgrey;
 	border-radius: 5px;
   }
-  .indicator span:nth-child(2){
+.indicator span:nth-child(2){
 	margin: 0 3px;
   }
-  .indicator span.active:before{
+.indicator span.active:before{
 	position: absolute;
 	content: '';
 	top: 0;
@@ -185,29 +210,33 @@ body {
 	width: 100%;
 	border-radius: 5px;
   }
-  .indicator span.weak:before{
+.indicator span.weak:before{
 	background-color: #ff4757;
   }
-  .indicator span.medium:before{
+.indicator span.medium:before{
 	background-color: orange;
   }
-  .indicator span.strong:before{
+.indicator span.strong:before{
 	background-color: #23ad5c;
   }
-  .text{
-	font-size: 10px;
-	font-weight: 500;
+/* ################################## Pass strength text Design ################################################ */
+.text{
+	font-size: 15px;
+	margin-left: 30px;
+    font-variant-alternates: ornaments();
+    font-weight: 600;
 	display: none;
-	margin-bottom: 10px;
+	margin-bottom: 2px;
   }
-  .text.weak{
+.text.weak{
 	color: #ff4757;
   }
-  .text.medium{
+.text.medium{
 	color: orange;
   }
-  .text.strong{
+.text.strong{
 	color: #23ad5c;
   }
-  
 
+
+ 

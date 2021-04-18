@@ -11,7 +11,7 @@
 
 html,
 body {
-    background-color: #ffffff;
+    background-color: rgba(245, 245, 245, 0.637);
     color: #000000c9;
     word-spacing: 2px;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -51,8 +51,8 @@ section {
 
 /* ----- LINKS ----- */
 
-a:link,
-a:visited {
+.box a:link,
+.box a:visited {
     color: #e67e22;
     text-decoration: none;
     font-size: 80%;
@@ -62,8 +62,8 @@ a:visited {
     transition: border-bottom 0.2s, color 0.2s;
 }
 
-a:hover,
-a:active {
+.box a:hover,
+.box a:active {
     color: #555;
     border-bottom: 1px solid transparent;
 }
@@ -143,6 +143,13 @@ background-color: #011f4b;
     vertical-align: middle;
     margin-top: -5px;
 }
+.search-icon{
+   
+    color: #fcfbff;
+}
+.sticky .search-icon{
+    color: #555;
+}
 /* ----------------------------------------------- */
 /* HEADER */
 /* ----------------------------------------------- */
@@ -181,6 +188,22 @@ background-color: #011f4b;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
 }
+/* ------------------Marquee----------------------------- */
+.news{
+    position: relative;
+    top: 0;
+    transform: translateY(-150%);
+    cursor: pointer;
+}
+
+.news marquee p{
+    font-size: 25px;
+}
+.news marquee a{
+    text-decoration: none;
+    color: inherit;
+}
+/* ----------------------------------------------- */
 
 /* Main navi */
 .main-nav {
@@ -192,16 +215,14 @@ background-color: #011f4b;
     transform: translate(60%, 0%);
     list-style: none;
     margin-top: 1px;
-    z-index: 1;
-}
+    /* z-index: 1; */
+   
+} 
 
 .main-nav li {
     display: inline-block;
     margin-left: 30px;
 }
-
-
-
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0;
@@ -219,8 +240,56 @@ background-color: #011f4b;
     border-bottom: 2px solid #ffffff;
     font-size: 100%;
 }
+/*--------------- sticky-----------------*/
 
-
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 2px 2px rgb(175, 163, 163);
+    z-index: 3;
+    transition: all .3s;
+    
+  }
+  .sticky .main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 1%;
+    transition: all .3s;
+  }
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+      padding: 8px 0;
+      color: #555;
+  }
+  .sticky .main-nav li a:hover,
+  .sticky .main-nav li a:active {
+    border-bottom: 2px solid #555;;
+    font-size: 100%;
+}
+  .sticky .logo{
+      margin-top: 2%;
+      height: 40px;
+      display: block;
+      transition: all 0.7s;
+  }
+  .sticky .logo:hover {
+    margin-top: 2%;
+    height: 60px;
+    display: block;
+    transition: all 0.2s;
+}
+  
+  .sticky .icon{
+    color: #555;
+}
+.sticky a{
+    
+    text-decoration: none;
+}
 /*--------------- logo-----------------*/
 .logo {
     height: 130px;

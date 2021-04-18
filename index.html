@@ -19,27 +19,25 @@
         <title>Kerala Tourism</title>
         
     </head>
-    <body>
+    <body><a name="home"></a>
+        <div class="bk-video">
+            <video autoplay loop muted src="contents/bk video/bk.mp4" type="video/mp4"></video>
+        </div>
         <header>
-           
-            <div class="bk-video">
-                <video autoplay loop muted src="contents/bk video/bk.mp4" type="video/mp4"></video>
-               
-            </div>
-            
-            <nav>
+             <nav>
                 <div class="row">
-                    <img src="./contents/kt1 copy.png" alt="K logo" class="logo">
+                    
+                    <a href="#home"><img src="./contents/kt1 copy.png" alt="K logo" class="logo"></a>
                     
                     <ul class="main-nav">
                         <li><a href="#section-1">Explore Kerala</a></li>
                         <li><a href="#section-2">Things to do</a></li>
                         <li><a href="#section-3">Plan your trip</a></li>
-                        <li><a href="contents/pages/under construction/construction.html">Search</i> <i class="icon ion-ios-search" style="color: #fcfbff; padding: 0 3px; size: 20%;"></i></a></li>
+                        <li><a href="contents/pages/under construction/construction.html">Search</i> <i class="search-icon ion-ios-search" style=" padding: 0 3px; size: 20%;"></i></a></li>
                     </ul>
-                   
                 </div>
-
+            </nav>
+            
             <div class="hero-text-box">
                                
                 <h1>Get Ready........ <br>Experience god's own country. </h1>
@@ -47,16 +45,30 @@
                 <a class="btn btn-full" href="contents/pages/sign in/signin.html">Let's go</a>
                 <a class="btn btn-ghost" href="contents/pages/sign up page/signup.html">Sign up</a>
             </div>
-            </nav>
-            </header>   
+
+<!-- ---------------------------Marquee---------------------------------------------- -->           
+            <div class="news">
+                <marquee>
+                  <p>
+                      <a href="https://www.keralatourism.org/covid-19"> <span style="font-weight: 500;"> #BreakTheChain: </span>Your safety is our priority!!!
+                      In the wake of the COVID-19 outbreak which is fast spreading globally, the Kerala government is taking proactive measures to stop the spread of the virus.You can find all the important
+                      messages and advisories related to travel issued by the government on this page. Click here to read our COVID-19 travel advisory. </a>
+                        
+                </p>
+                </marquee>
+              </div>
+            </div>
+<!-- ------------------------------------------------------------------------- -->  
+
+        </header>   
             
 
 
             <!-- ---------------------------Explore Kerala------------------------------------------------------------- -->
             
-            <section class="section-district"><a name="section-1"></a>
+            <section class="section-district js--section-district"><a name="section-1"></a>
                 
-                  
+                 <br><br><br><br>
                 <h2>Explore Kerala</h2>
                 <p class="long-text">For many travellers, Kerala is South India's most serenely beautiful state. This slender coastal strip is defined by its layered landscape: almost 600km of glorious Arabian Sea coast and beaches; a languid network of glistening backwaters; and the spice- and tea-covered hills of the Western Ghats, dotted with fiercely protected wildlife 
                     reserves and cool hill stations such as Munnar. Just setting foot on this swathe of soul-soothing, palm-shaded green will slow your subcontinental stride to a blissed-out amble. Kerala is a world away from the frenzy of the rest of India, its long, fascinating backstory illuminated by historically evocative cities like Kochi (Cochin) and Thiruvananthapuram (Trivandrum).
@@ -229,7 +241,8 @@
            
            <!-- ----------------------caroules--------------------------------------------------- -->
             <section><a name="section-2"></a>
-               <h2>Things to do</h2>
+                <br><br><br><br>
+                <h2>Things to do</h2>
                <p class="long-text">Kerala, the tropical state on India's Malabar Coast, is among the most popular tourist destinations in the country. Its distinctive culture and extremely picturesque setting—which contrasts with the fast-paced modern world—make Kerala an indulgent place to go to relax, similar to places like Bali and Tahiti. However, there's no shortage of things to do should you grow bored of your beachside slumber. 
                    Attend a traditional Kathakali dance performance, cruise the backwaters on a houseboat, or take an afternoon to go for paragliding.</p>
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -340,14 +353,11 @@
                     </button>
                   </div>
             </section>
-            
-
-
-
-
-
+ 
             <section class="section-plan" id="features"><a name="section-3"></a>
+                <br><br><br><br>
                 <div class="row">
+                    
                     <h2>Plan your trip</h2>
                     <p class="long-text">
                         Want to go on a trip to Kerala but too lazy to plan? Just by providing a few simple details about the trip, you’ll be guided to a well 
@@ -418,7 +428,7 @@
                 <div class="row">
                     <p>
                         This webpage was created as part of an assignment for ICT’s Mean Stack Development course 
-                        using HTML5, CSS3 and Bootstrap5. All images, videos, logos 
+                        using HTML5, CSS3, Java Script and Bootstrap5. All images, videos, logos 
                         and icons used in this webpage are free sources available on internet.
                         No copyrights here.
                     </p>
@@ -426,10 +436,11 @@
                         Build with <i class="ion-ios-heart" style="color: #ea0000; padding: 0 3px;"></i> by Sandeep Chandramohan, March 2021.
                     </p>
                 </div>
-            </footer>
-  
-  
+            </footer> 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+            <script src="vendors/js/jquery.waypoints.min.js"></script>
+            <script src="resources/script.js"></script>
         </body>
 </html>    
 

@@ -1,28 +1,191 @@
-.bg{
-    background: url("puli.jpg");
-    width: 100%;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+body {
+	
+	font-family: 'Open Sans', sans-serif;
+    background: url("puli.jpg") no-repeat top center;
+    height: 100%;
+    width: auto;
     background-size: cover;
-   
-}
-.form-container{
-    
-   
-    /* box-shadow: 0px 0px 28px 13px rgba(0,0,0,0.78);
--webkit-box-shadow: 0px 0px 28px 13px rgba(0,0,0,0.78);
--moz-box-shadow: 0px 0px 28px 13px rgba(0,0,0,0.78); */
-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
--webkit-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
--moz-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
-    margin-top: 40%;
-    color: rgb(255, 255, 255);
-    padding: 50px 30px;
-    border-radius: 20px;
-    
-}
-h1{
-    text-align: center;
-    
+ 
 }
 
+/* ################################## Form Body Design ################################################ */
+.form-container {
+	
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.658);
+    box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
+    -webkit-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
+    -moz-box-shadow: 0px 0px 165px 30px rgba(0,0,0,0.85) inset;
+    padding: 30px;
+    color: white;
+	
+	
+}
+h2 {
+	margin-top: 15px;
+    text-align: center;
+}
+/* ################################## Form Field Design ################################################ */
+.form-check {
+	margin-bottom: 5px;
+	padding-bottom: 15px;
+	position: relative;
+	width: 90%;
+	
+}
+
+.form-check label {
+	display: inline-block;
+	margin-bottom: 1px;
+}
+
+.form-check input {
+	
+    margin-top: 30px;
+	margin-left: 30px;
+    color:white;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #f0f0f0;
+     
+	/* border-radius: 4px; */
+	/* display: block; */
+	font-family: inherit;
     
+	font-size: 15px;
+	padding: 1px;
+	width: 100%;
+    transition: all 0.8s;
+}
+.form-check ::-webkit-input-placeholder{
+    color: white;
+    opacity: 0.7;
+}
+
+.form-check input:focus {
+	outline: 0;
+	border-color: rgba(0, 81, 255, 0.534);
+}
+
+.form-check.success input {
+	border-color: #2ecc71;
+	
+}
+
+.form-check.error input {
+	border-color: #e74c3c;
+}
+/* ################################## Form Error mssg Design ################################################ */
+.form-check small {
+	color: #e74c3c;
+	position: absolute;
+	margin-left: 30px;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	
+}
+
+.form-check.error small {
+	visibility: visible;
+	transition: all 0.9s;
+}
+/* ################################## Form Button Design ################################################ */
+.form-container button {
+	/* background-color: #5444ad;
+	border: 2px solid #2c1e7c; */
+	background: transparent;
+	cursor: pointer;
+	
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 2px;
+	margin-top: 10px;
+	width: 100%;
+}
+.form-container .bttn{
+	border-color: transparent;
+	border-bottom: 10px solid #f0f0f03a;
+	border-top: 10px solid #f0f0f03a;
+}
+.form-container .bttn:focus {
+	outline: 0;
+	border-bottom: 10px solid #330ddb83;
+	border-top: 10px solid #330ddb83;
+	transition: all 0.3s;
+	
+}
+.form-container .bttn:focus .sub{
+	color: white;
+	opacity: .2;
+	transition: all 0.3s;
+	
+} 
+/* ################################## Form Icon Design ################################################ */
+  .form-check i{
+	  position: absolute;
+	  transform: translateY(105%);
+	  font-size: 25px;
+	  color: #ffffff;
+	  transition: all 0.5s;
+  }
+  
+  .form-check.success i{
+	color: #2ecc71;
+	position: absolute;
+	  transform: translateY(105%);
+	  font-size: 25px;
+	
+}
+.form-check.error i{
+	color: #e74c3c;
+	position: absolute;
+	  transform: translateY(105%);
+	  font-size: 25px;
+}
+/* ################################## Form Password show icon Design ################################################ */
+	.eye {
+		float: right;
+		cursor: pointer;
+		
+			
+	}
+	.eye i{
+
+		transform: translateY(-100%);
+		
+	}
+	.form-check.success .eye i{
+		transform: translateY(-100%);
+		
+	}
+	.form-check.error .eye i{
+		transform: translateY(-100%);
+	}
+	#hide2{
+		display: none;
+	}
+	/* ################################## Forgot Password ################################################ */
+	span.forgotpsw{
+		
+		float: right;
+	}
+	

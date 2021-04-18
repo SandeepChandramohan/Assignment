@@ -4,83 +4,74 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="signup.css">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <title>Document</title>
+  <link rel="stylesheet" href="signup.css">
+  <title>Sign Up</title>
 </head>
+
 <body>
-  
-  <div class="bk-image">
-    <img src="bk image.jpg" alt="">
-  </div>
-  <div class="container ">
+  <div class="container-fluid">
     
-    <div class="header">
-      <h2>Sign Up</h2>
-    </div>
-    <form action="#" id="form" class="form">
-      <div class="form-check">
-        <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);"> Firstname</span></label>
-        <input type="text" placeholder="Firstname" id="username" >
-        <!-- <i class="icon ion-ios-checkbox"></i>
-        <i class="icon ion-md-information"></i> -->
-        <small>Error message</small>
-      </div>
-      <form id="form" class="form">
-        <div class="form-check">
-          <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);"> Lastname</span> </label>
-          <input type="text" placeholder="Lastname" id="lastname" />
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <small>Error message</small>
-        </div>
-      <div class="form-check">
-        <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);"> Email</span> </label>
-        <input type="email" placeholder="Email" id="email" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-      <div class="form-check">
-        <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);"> Mobile number</span></label>
-        <input type="text" placeholder="Mobile number" id="mobileno" >
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-      <div class="form-check">
-        
-        <div class="wallet">
-          <div class="field">
-            <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);">Password</span> </label> 
-            <input id="password1" onkeyup="trigger()" type="password" placeholder="Type password">
-              <span class="showBtn">SHOW</span>
-              <i class="fas fa-check-circle"></i>
-              <i class="fas fa-exclamation-circle"></i>
-              <small>Error message</small>
+          <form id="my-form" class="form-container" onsubmit="return validateFn()" action="../Sign in/signin.html">
+            <h2>Sign up</h2>
+
+<!-- ####################################### First name ################################################################### -->            
+            <div class="form-check">
+                <i class="icon ion-ios-person"></i>
+                <input id="fname" placeholder="First Name" type="text" onclick="resetmssg()">
+                <small >Error mssg</small>
             </div>
-            <div class="indicator">
-              <span class="weak"></span>
-              <span class="medium"></span>
-              <span class="strong"></span>
+<!-- ######################################## Last Name ################################################################## -->
+            <div class="form-check">
+              <i class="icon ion-ios-person-add"></i>
+              <input id="lname" placeholder="Last Name" type="text"> 
+              <small>Error mssg </small>
             </div>
-            <div class="text">
+<!-- ########################################"Email"################################################################## -->
+            <div class="form-check">
+              <i class="icon ion-ios-mail"></i>
+              <input id="email" placeholder="Email" type="email">
+              <small>Error mssg </small> 
             </div>
-          </div>
-        
-        <div class="form-check">
-        <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);">Password check</span></label>
-        <input type="password" placeholder="Retype Password" id="password2"/>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-      <button type="submit">Submit</button>
-      <script src="signup.js"></script>
-    </form>
-  </div>
-  
-  
+<!-- ########################################"Mobile no:"################################################################## -->
+            <div class="form-check">
+              <i class="icon ion-ios-call"></i>
+              <input id="mob" placeholder="Mobile no: (10 digit number)" type="text"> 
+              <small id="mssg">Error mssg </small>
+            </div>
+<!-- #######################################"Password"################################################################### -->
+            <div class="form-check">
+              <i class="icon ion-ios-key"></i>
+                <input id="pass" onkeyup="trigger()" type="Password" placeholder="Password">
+                <span class="eye" onclick="myfn()">
+                  <i id="hide1" class="icon ion-ios-eye"></i>
+                  <i id="hide2" class="icon ion-ios-eye-off"></i>
+                </span>
+                <small>Error mssg </small>
+                <div class="indicator">
+                <span class="weak"></span>
+                <span class="medium"></span>
+                <span class="strong"></span>
+              </div>
+              <div class="text">
+              </div>
+            </div>
+<!-- ##########################################"Retype Password"################################################################ -->          
+            <div class="form-check">
+              <i class="icon ion-ios-unlock"></i>
+              <!-- <label for="username"><span style="font-size: 14px; font-weight: 550; color: rgb(255, 255, 255);">Password check</span></label> -->
+              <input type="password" placeholder="Retype Password" id="pass2"/>
+              <small>Error mssg </small> 
+              </div>
+<!-- ########################################################################################################## -->
+
+
+              <br><br>
+           <button class="bttn" type="submit"><span class="sub">Submit</span> </button>
+        </form>
+  </div>   
+
+<script src="signup.js"></script>
   
 </body>
 </html>
